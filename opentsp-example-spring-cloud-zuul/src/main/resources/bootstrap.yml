@@ -1,0 +1,20 @@
+spring:
+  application:
+      name: zuul_8661
+
+server:
+  port: 8661
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    api-a:
+      path: /wedrive-api-a/**
+      serviceId: ribbon_9991
+    api-b:
+      path: /wedrive-api-b/**
+      serviceId: feign_9881

@@ -1,0 +1,17 @@
+server:
+  port: 8761
+
+spring:
+  application:
+      name: eureka-register-server
+
+#eureka 配置 ，eureka默认启动即是服务注册中心，也是一个应用提供者；
+#所以通过registerWithEureka: false 、fetchRegistry: false 手动配置成只提供应用注册服务
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+ #   serviceUrl:
+ #     defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

@@ -1,0 +1,9 @@
+spring:
+  application:
+      name: spring-cloud-config
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/properties

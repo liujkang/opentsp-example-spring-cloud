@@ -1,0 +1,28 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#spring:
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#      profile: local
+
+---
+spring:
+  profiles: eureka.client.8881
+  application:
+      name: eureka-client
+
+server:
+  port: 8881
+
+---
+spring:
+  profiles: eureka.client.8882
+  application:
+      name: eureka-client
+
+server:
+  port: 8882

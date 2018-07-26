@@ -1,0 +1,19 @@
+spring:
+  application:
+      name: feign_9881
+
+server:
+  port: 9881
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+feign:
+  hystrix:
+    enabled: true
+  httpclient: #启用org.apache.httpcomponents.httpclient 做为底层通信
+    enabled: true #true启用 false关闭
+  okhttp:   #是否采用okhttp做为底层通信
+    enabled: false #true启用 false关闭
